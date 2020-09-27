@@ -26,12 +26,7 @@ public class GestaoTokenRestAmazonsms extends GestaoTokenChaveUnica {
     }
 
     @Override
-<<<<<<< HEAD
     public String extrairToken(JSONObject pJson) {
         return null;
-=======
-    public String extrairToken(JSONObject jsono) {
-        throw new UnsupportedOperationException("O METODO AINDA N\u00c3O FOI IMPLEMENTADO.");
->>>>>>> ef914dc9fc741239d7f2d43823c1af661c2ffa8f
     }
 }
