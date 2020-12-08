@@ -1,6 +1,5 @@
 package br.org.coletivoJava.integracoes.restAmazonsms.implementacao;
 
-import br.org.coletivoJava.integracoes.amazonSMS.FabConfigSMSIntegracao;
 import br.org.coletivoJava.integracoes.restAmazonsms.api.InfoIntegracaoRestAmazonsms;
 import br.org.coletivoJava.integracoes.amazonSMS.FabIntegracaoSMS;
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
@@ -15,8 +14,9 @@ import com.amazonaws.services.sns.model.PublishResult;
 import com.super_bits.modulosSB.SBCore.ConfigGeral.SBCore;
 import com.super_bits.modulosSB.SBCore.UtilGeral.UtilSBCoreStringValidador;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.RespostaWebServiceRestIntegracao;
+import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.FabTipoAgenteClienteApi;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.implementacao.AcaoApiIntegracaoAbstrato;
-import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.FabTipoAgenteClienteRest;
+
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.token.TokenDeAcessoExternoChavePublicaPrivada;
 import com.super_bits.modulosSB.SBCore.modulos.objetos.registro.Interfaces.basico.ItfUsuario;
 import java.util.HashMap;
@@ -29,7 +29,7 @@ public class IntegracaoRestAmazonsmsEnviarMensagem
         AcaoApiIntegracaoAbstrato {
 
     public IntegracaoRestAmazonsmsEnviarMensagem(
-            final FabTipoAgenteClienteRest pTipoAgente,
+            final FabTipoAgenteClienteApi pTipoAgente,
             final ItfUsuario pUsuario, final java.lang.Object... pParametro) {
         super(FabIntegracaoSMS.ENVIAR_MENSAGEM, pTipoAgente, pUsuario,
                 pParametro);

@@ -4,8 +4,9 @@ import br.org.coletivoJava.integracoes.amazonSMS.FabConfigSMSIntegracao;
 import br.org.coletivoJava.integracoes.restAmazonsms.api.InfoIntegracaoRestAmazonsms;
 import br.org.coletivoJava.integracoes.amazonSMS.FabIntegracaoSMS;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.oauth.FabStatusToken;
+import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.FabTipoAgenteClienteApi;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.implementacao.gestaoToken.GestaoTokenChaveUnica;
-import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.FabTipoAgenteClienteRest;
+
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.token.ItfTokenDeAcessoExterno;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.token.TokenDeAcessoExternoChavePublicaPrivada;
 import com.super_bits.modulosSB.SBCore.modulos.objetos.registro.Interfaces.basico.ItfUsuario;
@@ -18,7 +19,7 @@ public class GestaoTokenRestAmazonsms extends GestaoTokenChaveUnica {
         return false;
     }
 
-    public GestaoTokenRestAmazonsms(final FabTipoAgenteClienteRest pTipoAgente,
+    public GestaoTokenRestAmazonsms(final FabTipoAgenteClienteApi pTipoAgente,
             final ItfUsuario pUsuario) {
         super(FabIntegracaoSMS.class, pTipoAgente, pUsuario);
     }
