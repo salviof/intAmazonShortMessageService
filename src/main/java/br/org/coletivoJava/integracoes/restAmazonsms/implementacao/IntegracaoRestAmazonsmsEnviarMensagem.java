@@ -53,6 +53,7 @@ public class IntegracaoRestAmazonsmsEnviarMensagem
         //<set SMS attributes>
         try {
             String respstr = sendSMSMessage(snsClient, mensagem, numeroTelefone, smsAttributes);
+            System.out.println("SMS" + respstr);
         } catch (Throwable t) {
 
         }

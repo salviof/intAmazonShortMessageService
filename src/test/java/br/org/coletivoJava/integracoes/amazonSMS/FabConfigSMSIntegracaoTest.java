@@ -25,7 +25,7 @@ public class FabConfigSMSIntegracaoTest extends TestesApiRest {
     @Test
     public void testValues() {
         SBCore.configurar(new ConfiguradorCoreShortMessageService(), SBCore.ESTADO_APP.DESENVOLVIMENTO);
-        gerarCodigos(FabIntegracaoSMS.class);
+        gerarCodigosChamadasEndpoint(FabIntegracaoSMS.class);
     }
 
 }
