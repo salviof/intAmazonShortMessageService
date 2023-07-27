@@ -46,8 +46,8 @@ public class IntegracaoRestAmazonsmsEnviarMensagem
         AmazonSNS snsClient = AmazonSNSClientBuilder.standard().withRegion(Regions.US_EAST_1)
                 .withCredentials(new AWSStaticCredentialsProvider(awsCreds)).build();
 
-        String numeroTelefone = parametros[0].toString();
-        String mensagem = parametros[1].toString();
+        String numeroTelefone = parametros.get(0).toString();
+        String mensagem = parametros.get(1).toString();
         Map<String, MessageAttributeValue> smsAttributes
                 = new HashMap<>();
         //<set SMS attributes>
