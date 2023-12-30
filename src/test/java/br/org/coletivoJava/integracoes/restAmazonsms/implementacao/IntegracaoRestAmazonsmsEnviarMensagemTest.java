@@ -8,6 +8,7 @@ package br.org.coletivoJava.integracoes.restAmazonsms.implementacao;
 import br.org.coletivoJava.integracoes.amazonSMS.ConfiguradorCoreShortMessageService;
 import br.org.coletivoJava.integracoes.amazonSMS.FabIntegracaoSMS;
 import com.super_bits.modulosSB.SBCore.ConfigGeral.SBCore;
+import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.conexaoWebServiceClient.ItfRespostaWebServiceSimples;
 import com.super_bits.modulosSB.SBCore.modulos.Controller.Interfaces.ItfResposta;
 import org.coletivojava.fw.api.tratamentoErros.FabErro;
 import org.junit.Test;
@@ -28,12 +29,13 @@ public class IntegracaoRestAmazonsmsEnviarMensagemTest extends TestesApiRest {
     public void testExecutarAcao() {
         try {
             SBCore.configurar(new ConfiguradorCoreShortMessageService(), SBCore.ESTADO_APP.DESENVOLVIMENTO);
-            ItfResposta resposta = FabIntegracaoSMS.ENVIAR_MENSAGEM.getAcao("+5531971125577", "Teste").getResposta();
+            ItfRespostaWebServiceSimples resposta = FabIntegracaoSMS.ENVIAR_MENSAGEM.getAcao("+553197140804", "Teste 2").getResposta();
             Assert.notNull(resposta, "A resposta foi nula");
 
             if (!resposta.isSucesso()) {
                 resposta.dispararMensagens();
             }
+            System.out.println(resposta.getRespostaTexto());
             Assert.isTrue(resposta.isSucesso(), "Falha enviando SMS");
 
         } catch (Throwable t) {
