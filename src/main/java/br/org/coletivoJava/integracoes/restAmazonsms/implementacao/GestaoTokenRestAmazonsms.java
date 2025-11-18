@@ -9,7 +9,7 @@ import com.super_bits.modulosSB.SBCore.integracao.libRestClient.implementacao.ge
 
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.token.ItfTokenDeAcessoExterno;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.token.TokenDeAcessoExternoChavePublicaPrivada;
-import com.super_bits.modulosSB.SBCore.modulos.objetos.registro.Interfaces.basico.ItfUsuario;
+import com.super_bits.modulosSB.SBCore.modulos.objetos.registro.Interfaces.basico.ComoUsuario;
 
 @InfoIntegracaoRestAmazonsms(tipo = FabIntegracaoSMS.ENVIAR_MENSAGEM)
 public class GestaoTokenRestAmazonsms extends GestaoTokenChaveUnica {
@@ -20,7 +20,7 @@ public class GestaoTokenRestAmazonsms extends GestaoTokenChaveUnica {
     }
 
     public GestaoTokenRestAmazonsms(final FabTipoAgenteClienteApi pTipoAgente,
-            final ItfUsuario pUsuario) {
+            final ComoUsuario pUsuario) {
         super(FabIntegracaoSMS.class, pTipoAgente, pUsuario);
     }
 

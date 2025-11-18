@@ -4,7 +4,7 @@
  */
 package br.org.coletivoJava.integracoes.amazonSMS;
 
-import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.ItfFabricaIntegracaoRest;
+import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.ComoFabricaIntegracaoRest;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.conexaoWebServiceClient.InfoConsumoRestService;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.servicoRegistrado.FabTipoAutenticacaoRest;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.servicoRegistrado.InfoConfigRestClientIntegracao;
@@ -16,7 +16,7 @@ import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.servicoRegis
 @InfoConfigRestClientIntegracao(configuracao = FabConfigSMSIntegracao.class,
         nomeIntegracao = "amazonSMS",
         tipoAutenticacao = FabTipoAutenticacaoRest.CHAVE_PUBLICA_PRIVADA)
-public enum FabIntegracaoSMS implements ItfFabricaIntegracaoRest {
+public enum FabIntegracaoSMS implements ComoFabricaIntegracaoRest {
 
     @InfoConsumoRestService(getPachServico = "", parametrosPost = {"Mensagem", "id", "ClienteID"})
     ENVIAR_MENSAGEM;
