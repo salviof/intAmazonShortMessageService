@@ -12,7 +12,7 @@ import com.amazonaws.services.sns.model.MessageAttributeValue;
 import com.amazonaws.services.sns.model.PublishRequest;
 import com.amazonaws.services.sns.model.PublishResult;
 import com.super_bits.modulosSB.SBCore.ConfigGeral.SBCore;
-import com.super_bits.modulosSB.SBCore.UtilGeral.UtilSBCoreStringValidador;
+import com.super_bits.modulosSB.SBCore.UtilGeral.UtilCRCStringValidador;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.RespostaWebServiceRestIntegracao;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.FabTipoAgenteClienteApi;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.implementacao.AcaoApiIntegracaoAbstrato;
@@ -63,7 +63,7 @@ public class IntegracaoRestAmazonsmsEnviarMensagem
     private String sendSMSMessage(AmazonSNS snsClient, String message,
             String phoneNumber, Map<String, MessageAttributeValue> smsAttributes) {
         try {
-            if (!UtilSBCoreStringValidador.isNuloOuEmbranco(phoneNumber)) {
+            if (!UtilCRCStringValidador.isNuloOuEmbranco(phoneNumber)) {
                 PublishResult result = snsClient.publish(new PublishRequest()
                         .withMessage(message)
                         .withPhoneNumber(phoneNumber)
