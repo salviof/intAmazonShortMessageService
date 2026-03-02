@@ -4,7 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
                              http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
+    <parent>
+        <groupId>br.org.coletivojava.sbfw</groupId>
+        <artifactId>SB_FRAMEWORK</artifactId>
+        <version>0.9-SNAPSHOT</version>
+        <relativePath>../../FWColetivoJava/pom.xml</relativePath>
+    </parent>
     <groupId>br.org.coletivoJava.fw.integracoes</groupId>
     <artifactId>intAmazonShortMessageService</artifactId>
     <version>1.0.0-RC-SNAPSHOT</version>
@@ -52,7 +57,7 @@
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk-sns</artifactId>
-            <version>1.11.450</version>
+
         </dependency>
 
 
@@ -66,7 +71,7 @@
 
 
 
-       
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
