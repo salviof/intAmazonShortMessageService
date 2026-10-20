@@ -5,8 +5,8 @@
  */
 package br.org.coletivoJava.integracoes.amazonSMS;
 
+import com.super_bits.modulosSB.SBCore.ConfigGeral.ComoContextoExecCustomizavel;
 import com.super_bits.modulosSB.SBCore.ConfigGeral.ConfiguradorCoreModelSemPersistencia;
-import com.super_bits.modulosSB.SBCore.ConfigGeral.ItfConfiguracaoCoreCustomizavel;
 
 /**
  *
@@ -48,7 +48,7 @@ public class ConfiguradorCoreShortMessageService extends ConfiguradorCoreModelSe
      * @param pConfig Objeto Com informações de configuração do sistema
      */
     @Override
-    public void defineFabricasDeACao(ItfConfiguracaoCoreCustomizavel pConfig) {
+    public void defineFabricasDeACao(ComoContextoExecCustomizavel pConfig) {
         setIgnorarConfiguracaoPermissoes(true);
         setIgnorarConfiguracaoAcoesDoSistema(true);
     }
